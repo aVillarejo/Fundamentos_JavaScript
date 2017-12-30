@@ -9,17 +9,35 @@ const edadBeto = 26
 const nameSalomon = 'Salomon'
 const edadSalomon = 12
 
-function VerPeli(A,B) {
-	if (B>13){
-		console.log(`${A} Puedes ver la pelicula, porque tu edad es:${B}`)
-	}else{
-		console.log(`${A} No puedes ver la pelicula, porque tu edad es:${B}`)
+function VerPeli(name,edad,isWhitAdult=false) {
+	if (edad >= PG){
+		alert(`${name} Puedes ver la pelicula, porque tu edad es:${edad} años`)
+	}else if (isWhitAdult){
+			alert(`${name} Puedes ver la pelicula, porque tu edad es:${edad} años 
+pero vienes con un adulto`)
+
+	} else{
+		alert(`${name} No puedes ver la pelicula, porque tu edad es: ${edad} años`)
 	}
 }
 
 
-console.log(VerPeli(nameBeto, edadBeto))
-console.log(VerPeli(nameSalomon, edadSalomon))
+//Reto Realizar la funcion anterior con funciones flecha
+const VerPeli2 = (name,edad,isWhitAdult=false) => {
+	if (edad >= PG){
+		alert(`${name} Puedes ver la pelicula, porque tu edad es:${edad} años`)
+	}else if (isWhitAdult){
+			alert(`${name} Puedes ver la pelicula, porque tu edad es:${edad} años 
+pero vienes con un adulto`)
+
+	} else{
+		alert(`${name} No puedes ver la pelicula, porque tu edad es: ${edad} años`)
+	}
+}
+
+//console.log(VerPeli(nameBeto, edadBeto))
+console.log(VerPeli(nameSalomon, edadSalomon ))
+console.log(VerPeli2(nameSalomon, edadSalomon ))
 
 
 
