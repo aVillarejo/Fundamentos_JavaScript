@@ -5,7 +5,7 @@ function platzom(str) {
 		return str.split('').reverse().join("")
 	}
 
-	function minMay(str) {
+	const minMay = (str) => {
 		const length =str.length
 		let translation = '' 
 		let capitalize = true
